@@ -5,17 +5,17 @@ a given amount total
 
 
 def makeChange(coins, total):
-  """ calc how much change the total will require """
-  if total <= 0:
-    return 0
-  else:
-    coin = sorted(coins)
-    coin.reverse()
-    count = 0
-    for i in coin:
-      while(total >= i):
-        count += 1
-        total -= i
-    if total == 0:
-      return count
-    return -1
+    """ calc how much change the total will require """
+    if total <= 0:
+        return 0
+    else:
+        coin = sorted(coins)
+        coin.reverse()
+        count = 0
+        for i in coin:
+            while(total >= i):
+                count += 1
+                total -= i
+        if total == 0:
+            return count
+        return -1
